@@ -1,0 +1,373 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Import Bulma
+@import './node_modules/bulma/bulma';
+
+a:hover {
+  color: white;
+}
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+/* INTRO SECTION */
+.intro-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0)), url(../imgs/intro.jpeg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.intro-title {
+  width: 100vw;
+  text-align: center;
+  color: white;
+  font-size: 68px;
+}
+.intro-subtitle {
+  width: 100vw;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+  background-color: white;
+  padding: 3rem 0rem;
+}
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 50vh;
+
+}
+.about-title {
+  width: 60%;
+}
+.about-subtitle {
+  width: 50%;
+}
+
+.education-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+.hyper-island {
+  background: url(../imgs/HI.jpg);
+  width: 50vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+.hyper-overlay {
+  position: absolute;
+  left: 50vw;
+  background-color: #000000b8;
+  overflow: hidden;
+  width: 0;
+  height: 50vh;
+  display: flex;
+  transition: 0.5s ease;
+  justify-content: center;
+  align-items: center;
+}
+.hyper-text {
+  position: absolute;
+  white-space: nowrap;
+  color: white;
+  font-size: 40px;
+  overflow: hidden;
+  text-align: center;
+}
+.hyper-island:hover .hyper-overlay {
+  width: 50vw;
+  left:0vw;
+}
+.education-text {
+  text-decoration: none;
+  color: #fff;
+}
+.kyh {
+  width: 50vw;
+  height: 50vh;
+  background:url(../imgs/KYH.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95%;
+  border: 2px solid black;
+}
+.kyh-overlay {
+  position: absolute;
+  left: 50vw;
+  background-color: #000000d9;
+  overflow: hidden;
+  width: 0;
+  height: 50vh;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kyh:hover .kyh-overlay {
+  width: 50vw;
+  left: 50vw;
+}
+.kyh-text {
+  position: absolute;
+  white-space: nowrap;
+  color: white;
+  font-size: 40px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid white;
+  width: 300px;
+}
+/* PORTFOLIO SECTION */
+.portfolio-section {
+  height: 100vh;
+}
+.portfolio-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.portfolio-box {
+  border: 1px solid gray;
+  width: 31vw;
+  height: 40vh;
+}
+.portfolio-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 19, 26, 0.9);
+    transition: .5s ease;
+    opacity: 0;
+}
+.portfolio-overlay:hover {
+  opacity: 1;
+}
+.portfolio-text {
+  font-size: 25px;
+  transition: .5s ease;
+  color: white;
+}
+/* CONTACT */
+.contact {
+  height: 100vh;
+  background-color: #10131a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-me {
+  background-color:#10131a;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-me h2 {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  font-size: 80px;
+  color: white;
+}
+.contact-me p::before {
+  content: '';
+
+  bottom: 0;
+  left: 50%;
+  width: 80px;
+  height: 1px;
+  margin-left: -40px;
+  background-color: #66fcf1;
+}
+.contact-me p {
+  text-align: center;
+  font-size: 18px;
+  width: 80%;
+  color: white;
+}
+.email {
+  color: #66fcf1;
+}
+.contact-input {
+  border: 0;
+  border-bottom: 1px solid #33353c;
+  width: 100%;
+  height: 80px;
+  font-size: 24px;
+  background-color: #10131a;
+  color: #fff;
+  padding-bottom: 5px;
+  outline: none;
+}
+.formfield {
+  border: 0;
+  border-bottom: none;
+  width: 100%;
+  height: 80px;
+  font-size: 24px;
+  background-color: #10131a;
+  color: #fff;
+  padding: 12px 0px 5px 0px;
+  outline: none;
+}
+textarea {
+  min-height: 80px;
+  resize: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+input:focus::-webkit-input-placeholder {
+    color: #33353c;
+}
+textarea:focus::-webkit-input-placeholder {
+    color: #33353c;
+}
+.contact-button {
+  border: 2px solid #66fcf1;
+  letter-spacing: 3px;
+  color: #fff;
+  font-size: 16px;
+  padding: 16px;
+  margin-top: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.contact-button:hover {
+  background-color: #66fcf1;
+  color: #000;
+  cursor: pointer;
+}
+@media only screen and (max-width: 769px){
+  .about{
+    justify-content: start;
+  }
+  .about > div {
+   width: 100vw;
+   padding: 25px 35px;
+   font-size: 26px;
+}
+  .portfolio-section {
+    height: auto;
+  }
+  .portfolio-wrapper {
+    justify-content: center;
+  }
+  .portfolio-box {
+    width: 80vw;
+    height: 30vh;
+    margin-top:15px;
+  }
+
+  .portfolio {
+    height: auto;
+  }
+  .education {
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+  .education .hyper-island, .education .kyh {
+    width: 100vw;
+  }
+  .hyper-overlay {
+    left: 100vw;
+  }
+  .education .hyper-island:hover .hyper-overlay {
+    width: 100vw;
+    left:0vw;
+}
+  .hyper-text {
+  }
+  .kyh-overlay {
+    left: 0vw;
+  }
+  .education .kyh:hover .kyh-overlay {
+    width: 100vw;
+    left: 0vw;
+  }
+  .wisdom div {
+    width: 80vw;
+    margin-bottom: 40px;
+  }
+  .contact {
+    
+  }
+  .contact-me {
+    background-color: #10131a;
+    width: 88vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 415px){
+  .title.is-3 {
+    font-size: 1.3rem;
+  }
+  .about-title {
+    width: 89%;
+  }
+  .about{
+    justify-content: center;
+    height: 100vh;
+  }
+  .about > div {
+  width: 80vw;
+  font-size: 26px;
+  }
+  .about > div h2 {
+    font-size: 65px;
+  }
+  .education-wrapper {
+    flex-wrap: wrap;
+  }
+  .hyper-island {
+    width: 100vw;
+  }
+  .kyh {
+    width: 100vw;
+  }
+   .hyper-island:hover .hyper-overlay {
+    width: 100vw;
+  }
+  .kyh:hover .kyh-overlay {
+    width: 100vw;
+    left: 0;
+  }
+
+  .portfolio-box {
+    width: 80vw;
+    height: 30vh;
+    margin-top:15px;
+  }
+  .contact-me h2 {
+    font-size: 68px;
+  }
+  .contact {
+    height: auto;
+  }
+}
